@@ -1,0 +1,217 @@
+* {
+    outline: 1px solid salmon;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sec {
+    padding: 120px 0;
+}
+
+
+/* header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header .gnb .main_menu {
+    display: flex;
+    transition: 0.1s;
+}
+
+.header .gnb .main_menu:hover {
+    color: #666;
+}
+
+.header .gnb .main_menu>li {
+    position: relative;
+    padding: 20px 0 20px 10px;
+    transition: 0.5s;
+}
+
+.header .gnb .main_menu li:hover {
+    color: #dadada;
+}
+
+.header .gnb>ul>li .sub_menu {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    margin: 0 25px;
+
+    display: none;
+}
+
+.header .gnb>ul>li:hover .sub_menu {
+    display: block;
+    background: #111;
+}
+
+.header .gnb>ul>li .sub_menu a {
+    display: block;
+    color: #666;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 30px;
+    transition: 0.2s;
+}
+
+.header .gnb>ul>li .sub_menu a:hover {
+    color: #dadada;
+}
+
+.side_gnb {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    z-index: 999;
+}
+
+.side_gnb li a {
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 21px;
+    font-weight: 300;
+}
+
+.side_gnb li a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 0 5px 0 0;
+}
+
+.side_gnb li.on a span {
+    display: block;
+    transform: translate(-100%, 0);
+}
+
+.side_gnb li a::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 0;
+    width: 50%;
+    height: 1px;
+    background: #dadada;
+    transition: width 0.3s;
+}
+
+.side_gnb li.on a::after {
+    width: 100%;
+}
+
+
+/* 풀페이지 */
+
+.main {
+    position: relative;
+    background: url(../images/main01.png) no-repeat center center/cover;
+}
+
+.main .tit {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
+
+}
+
+.about .tit {
+    font-size: 32px;
+    margin: 0 auto 30px auto;
+}
+
+.about .content {
+    display: flex;
+    gap: 60px;
+}
+
+.about .content .left {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about .content .left img {
+    height: 600px;
+}
+
+
+.about .content .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about .content .right .txt {
+    line-height: 1.2;
+}
+
+.about .content .right .txt strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.about .content .right .txt p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 15px 0;
+    color: #c5c5c5;
+}
+
+.about .content .right .txt span {
+    font-size: 16px;
+    font-weight: 300;
+    color: #c5c5c5;
+}
+
+.about .content .right img {
+    width: 100%;
+}
+
+.youtube {
+    position: relative;
+    background: url(../images/about02.jpg) no-repeat center/cover;
+    ;
+
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.works {}
+
+.showreel {
+    background: url(../images/bg.jpg) no-repeat center center/cover;
+}
