@@ -28,10 +28,10 @@ $(function () {
         e.preventDefault();
     });
     $('.Main__content').fullpage({
-        anchors: ['main', 'about', 'youtube', 'works', 'showreel'],
+        anchors: ['main', 'about', 'youtube', 'works01', 'works02', 'works03', 'contact'],
         navigation: false,
         css3: false,
-        responsiveWidth: 700,
+        // responsiveWidth: 700,
         scrollOverflow: true,
         afterRender: function () {
             $('.Main__content .section').eq(0).addClass('on');

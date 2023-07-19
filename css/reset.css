@@ -34,7 +34,7 @@ body {
     color: #dadada;
     background: #111;
 
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'Roboto', 'Noto Serif KR', sans-serif;
 }
 
 /* 시각장애인을 위한 대체 텍스트 */
