@@ -31,7 +31,7 @@ $(function () {
         anchors: ['main', 'about', 'youtube', 'works01', 'works02', 'works03', 'contact'],
         navigation: false,
         css3: false,
-        // responsiveWidth: 700,
+        responsiveWidth: 700,
         scrollOverflow: true,
         afterRender: function () {
             $('.Main__content .section').eq(0).addClass('on');
@@ -60,4 +60,15 @@ $(function () {
         $(this).addClass('on').siblings().removeClass('on');
         $('.cf li').eq(idx).addClass('on').siblings().removeClass('on');
     });
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().stop().slideDown();
+        $(this).parent().siblings().find('.sub_menu').slideUp();
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb .sub_menu').removeAttr('style');
+    })
+
 })
