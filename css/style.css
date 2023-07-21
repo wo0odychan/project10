@@ -276,8 +276,7 @@
     margin: 0 0 10px 0;
 }
 
-.works .content .txt span {
-    display: block;
+.works .content .txt p {
     font-size: 20px;
     font-weight: 500;
     color: #666;
@@ -288,14 +287,33 @@
     margin: 0 0 10px 0;
 }
 
-.works .content .txt strong {
-    display: block;
+.works .content .txt ul {
+    display: flex;
+    gap: 20px;
+
+    justify-content: end;
     font-weight: 200;
+}
+
+.works .content .txt .etc {
     margin: 0 0 10px 0;
 }
 
-.works .content .txt p {
-    font-weight: 200;
+.works .content .txt ul>li {
+    position: relative;
+
+}
+
+.works .content .txt ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 2px;
+    height: 15px;
+    width: 1px;
+    transform: rotate(20deg);
+    margin: 0 0 0 -14px;
+    background: #999;
 }
 
 .works .content figure img {
@@ -567,7 +585,7 @@
         font-size: 24px;
     }
 
-    .works .content .txt span {
+    .works .content .txt p {
         font-size: 16px;
         margin: 0 0 35px 0;
     }
@@ -576,12 +594,27 @@
         display: none;
     }
 
-    .works .content .txt strong {
-        font-size: 14px;
+    .works .content .txt ul {
+        display: block;
+        font-weight: 200;
+        font-size: 16px;
+        color: #999;
     }
 
-    .works .content .txt p {
-        font-size: 14px;
+    .works .content .txt .etc {
+        margin: 0 0 20px 0;
+        color: #e2e2e2;
+    }
+
+    .works .content .txt ul>li {
+        position: relative;
+        margin: 0 0 8px 0;
+
+    }
+
+    .works .content .txt ul>li~li::before {
+        content: "";
+        display: none;
     }
 
     .works03 {
